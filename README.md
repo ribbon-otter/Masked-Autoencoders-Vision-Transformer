@@ -3,6 +3,8 @@ A recreation of Masked Autoencoders Are Scalable Vision Learners (Kaiming He, Xi
 1. tokens are gathered both densely and with dilated convolutions. This means each token knows about its surrounding context at a reduced resolution. This does mean that when tokens are removed during the training process, not all direct pixel data is removed. Additionally, because of the use of padding, the dilated convolutions potentially encode some positions data as well. 
 2. The dataset is CelebA rather than the datasets that Kaiming He et all used. 
 
+Note that this respository only trains the original model, it doesn't take those weights and use them as pre-training for something else. Thus, it doesn't replicate the core claim of the paper, that masked autoencoders work for pre-training.
+
 All errors are my own, rather than the paper authors.
 
 The code originally was based on a this tutorial by [Building a Vision Transformer from scratch](https://www.geeksforgeeks.org/deep-learning/building-a-vision-transformer-from-scratch-in-pytorch/) but since evolved significantly, but some lines of code remain identical. 
